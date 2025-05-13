@@ -1,5 +1,13 @@
 #!/bin/bash
+sudo apt-get update
+sudo apt-get install docker.io
+sudo systemctl enable --now docker
 
+clear
+docker --version
+clear
+
+touch Dockerfile
 # Start PulseAudio server
 pulseaudio -D --exit-idle-time=-1
 
